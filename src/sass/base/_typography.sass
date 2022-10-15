@@ -1,0 +1,35 @@
+    
+body
+    font-family: Roboto
+    font-weight: 300
+    color: $color-grey
+    letter-spacing: 0.125rem
+
+.title-first
+    color: $color-white
+    
+    &__main
+        display: block
+        line-height: 3.75rem
+        letter-spacing: .6rem
+        font-weight: 800
+        @include adaptiv-font(50, 24)
+        text-transform: uppercase
+        margin-bottom: .625rem
+        animation-name: LefttoRightMain
+        animation-duration: 2s
+        animation-delay: .6s
+        animation-timing-function: ease
+        backface-visibility: hidden
+    &__secondary
+        display: block
+        font-weight: 100
+        @include adaptiv-font(40, 12)
+        line-height: 3rem
+        letter-spacing: .31rem
+        animation-name: LefttoRightSecondary
+        animation-duration: 2s
+        animation-delay: 0.6s
+        animation-timing-function: ease
+        backface-visibility: hidden
+        margin-bottom: 4rem 
