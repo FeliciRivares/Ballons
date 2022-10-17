@@ -1,0 +1,23 @@
+.btn-text
+    &:link,
+    &:visited
+        font-weight: 700
+        @include adaptiv-font(16,10)
+        line-height: 1.18rem
+        letter-spacing: 0.125rem
+        color: $color-grey
+        text-decoration: none
+        padding: .8rem
+        border-bottom: 1px $color-brown-light solid
+        transition: all 0.5s
+        display: inline-block
+
+    &:hover
+        background-color: $color-brown-light
+        color: $color-white
+        box-shadow: $box-shadow-dark
+        transform: translateY(-.2rem)
+    &:active
+        transform: translateY(.0rem)
+        box-shadow: $box-shadow-light
+    
