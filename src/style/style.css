@@ -200,6 +200,10 @@ body {
   margin-bottom: 3.125rem;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -251,7 +255,7 @@ body {
   font-size: calc(10px + 6 * ((100vw - 320px) / 1020));
   line-height: 1.18rem;
   letter-spacing: 0.125rem;
-  color: #777;
+  color: #BA8554;
   text-decoration: none;
   padding: 0.8rem;
   border-bottom: 1px #BA8554 solid;
@@ -267,6 +271,166 @@ body {
 .btn-text:active {
   transform: translateY(0rem);
   box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 60%;
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.4rem;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.3s;
+  outline-offset: 0.8rem;
+}
+.composition__photo_n1 {
+  top: 0;
+  left: 1.5rem;
+}
+.composition__photo_n2 {
+  top: 4.5rem;
+  right: 0rem;
+}
+.composition__photo_n3 {
+  top: 10rem;
+  left: 3rem;
+}
+.composition__photo:hover {
+  transform: scale(1.1);
+  z-index: 20;
+  outline: 1rem solid #BA8554;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.8);
+}
+
+.adventure-card {
+  padding: 1.56rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.3rem;
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: all 0.5s;
+}
+.adventure-card:hover {
+  transform: translateY(-1rem) scale(1.07);
+}
+.adventure-card__icon {
+  font-size: calc(45px + 15 * ((100vw - 320px) / 1020));
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.card-tour {
+  height: 32.5rem;
+  perspective: 120rem;
+  -moz-perspective: 120rem;
+  position: relative;
+}
+.card-tour__side {
+  transition: all 0.7s ease-out;
+  height: 32.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 0.3rem;
+}
+.card-tour__side_front {
+  background: #fff;
+}
+.card-tour__side_back {
+  transform: rotateY(180deg);
+  background: linear-gradient(120deg, #BA8554 0.03%, #A14F03 99.94%);
+}
+.card-tour:hover .card-tour__side_front {
+  transform: rotateY(-180deg);
+}
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(0deg);
+}
+.card-tour__img {
+  background-blend-mode: hard-light;
+  height: 16rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+.card-tour__img_1 {
+  background: #BA8554 url(../img/tour-section/tour-1.png) center/cover no-repeat;
+}
+.card-tour__img_2 {
+  background: #BA8554 url(../img/tour-section/tour-2.png) center/cover no-repeat;
+}
+.card-tour__img_3 {
+  background: #BA8554 url(../img/tour-section/tour-3.png) center/cover no-repeat;
+}
+.card-tour__title {
+  font-size: calc(18px + 10 * ((100vw - 320px) / 1020));
+  letter-spacing: 0.18rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  position: absolute;
+  top: 12rem;
+  right: 0rem;
+}
+.card-tour__span {
+  background: linear-gradient(90deg, #BA8554, #A14F03);
+  padding: 0.2rem 0.6rem 0.1rem 0.6rem;
+  color: #fff;
+}
+.card-tour__span_2 {
+  position: absolute;
+  top: 2rem;
+  right: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0.3rem;
+}
+.card-tour__descr ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+}
+.card-tour__descr ul li {
+  color: #777;
+  font-size: calc(10px + 6 * ((100vw - 320px) / 1020));
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  border-bottom: 1px solid;
+  display: inline-block;
+}
+.card-tour__descr ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.card-tour__backSide-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-tour__text {
+  margin-bottom: 5rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.card-tour__text_1 {
+  font-size: calc(10px + 6 * ((100vw - 320px) / 1020));
+  font-weight: 300;
+}
+.card-tour__text_2 {
+  font-size: calc(40px + 20 * ((100vw - 320px) / 1020));
+  font-weight: 500;
 }
 
 .header {
@@ -336,8 +500,22 @@ body {
   margin-right: 3.75rem;
 }
 
-section {
+.section-about {
   padding-top: 5rem;
+  padding-bottom: 8rem;
+}
+
+.section-adventure {
+  padding: 13.125rem 0rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/balloon-third-section.png) center/cover no-repeat;
+  transform: skewY(6deg);
+}
+.section-adventure > * {
+  transform: skewY(-6deg);
+}
+
+.section-tour {
+  padding-top: 10rem;
 }
 
 @media (max-width: 750px) {

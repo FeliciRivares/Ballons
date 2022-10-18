@@ -1,0 +1,96 @@
+.card-tour
+    height: 32.5rem
+    perspective: 120rem
+    -moz-perspective: 120rem
+    position: relative
+    
+    &__side
+        transition: all .7s ease-out
+        height: 32.5rem
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        backface-visibility: hidden
+        box-shadow: $box-shadow-light
+        overflow: hidden
+        border-radius: .3rem
+        &_front
+            background: $color-white
+        &_back
+            transform: rotateY(180deg)
+            background: linear-gradient(120deg, $color-brown-light 0.03%, $color-brown-dark 99.94%)
+
+
+    &:hover &__side_front
+        transform: rotateY(-180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+
+
+    &__img
+        background-blend-mode: hard-light
+        height: 16rem
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80% )
+        &_1
+            background: $color-brown-light url(../img/tour-section/tour-1.png) center / cover no-repeat
+        &_2
+            background: $color-brown-light url(../img/tour-section/tour-2.png) center / cover no-repeat
+        &_3
+            background: $color-brown-light url(../img/tour-section/tour-3.png) center / cover no-repeat
+    &__title
+        @include adaptiv-font(28, 18)
+        letter-spacing: .18rem
+        font-weight: 300
+        text-transform: uppercase
+        text-align: right
+        position: absolute
+        top: 12rem
+        right: 0rem
+    &__span
+        background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
+        padding: .2rem .6rem .1rem .6rem
+        color: $color-white
+        &_1
+        &_2
+            position: absolute
+            top: 2rem
+            right: 0rem
+            padding-top: 0rem
+            padding-bottom: .3rem
+    &__descr
+        ul
+            list-style: none
+            margin: 0 auto
+            width: 75%
+            text-align: center
+            li
+                color: $color-grey
+                @include adaptiv-font(16, 10)
+                letter-spacing: .1rem
+                font-weight: 400
+                border-bottom: 1px solid 
+                display: inline-block
+                &:not(:last-child)
+                    margin-bottom: 1rem
+
+
+    &__backSide-box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+    &__text
+        margin-bottom: 5rem
+        color: $color-white
+        letter-spacing: .1rem
+        text-transform: uppercase
+        text-align: center
+        &_1
+            @include adaptiv-font(16, 10)
+            font-weight: 300
+
+        &_2
+            @include adaptiv-font(60, 40)
+            font-weight: 500   
+
