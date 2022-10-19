@@ -1,0 +1,43 @@
+.book
+    height: 31.25rem
+    background: linear-gradient(115deg, rgba(255,255,255,0.9) 0%, rgba(250,250,250,0.9) 57%, rgba(186,133,84,0.5) 57%, rgba(161,79,3,0.5) 100%), url(../img/last-section.png) center / cover no-repeat
+    box-shadow: $box-shadow-light
+    border-radius: .3rem
+    overflow: hidden
+.form
+    width: 60%
+    padding-top: 3.2rem
+    padding-left: 3.2rem 
+    &__group:not(:last-child)
+        margin-bottom: 3rem
+    &__input
+        font-weight: 400
+        @include adaptiv-font(16, 10)
+        letter-spacing: 0.125rem
+        color: $color-black
+        background: $color-white
+        padding: 1rem 0rem 1rem 1rem
+        border: none
+        border-bottom: 3px solid transparent
+        border-radius: .3rem
+        width: 55%
+        &:focus
+            outline: none
+            border-bottom: 3px solid #66D763
+            box-shadow: $box-shadow-light
+
+        &:focus:invalid
+            border-bottom: 3px solid #D76363
+    &__lable
+        font-weight: 400
+        @include adaptiv-font(16, 10)
+        letter-spacing: 0.125rem
+        display: block
+        margin-top: .8rem
+        margin-left: 1rem
+        transition: .5s all   
+    &__input:placeholder-shown + &__lable
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-2rem)
+                

@@ -100,6 +100,8 @@ body {
 
 .container {
   background: #f7f7f7;
+  position: relative;
+  z-index: 0;
 }
 
 body {
@@ -163,6 +165,9 @@ body {
   transition: all 0.5s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+}
+.title-secondary_white {
+  color: #fff;
 }
 .title-secondary:hover {
   transform: skewX(15deg) scale(1.1);
@@ -433,6 +438,137 @@ body {
   font-weight: 500;
 }
 
+.feedback-card {
+  width: 75%;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  padding: 2rem;
+  transform: skewX(330deg);
+}
+.feedback-card > * {
+  transform: skewX(-330deg);
+}
+.feedback-card__img {
+  width: 10rem;
+  height: 10rem;
+  float: left;
+  border-radius: 100rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  margin-right: 2.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.feedback-card__img img {
+  height: 100%;
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.feedback-card__name {
+  text-align: center;
+  color: #fff;
+  font-size: calc(18px + 6 * ((100vw - 320px) / 1020));
+  font-weight: 400;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.feedback-card:hover .feedback-card__name {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.feedback-card:hover img {
+  transform: scale(1);
+  filter: blur(0.2rem) brightness(75%);
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.book {
+  height: 31.25rem;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.9) 0%, rgba(250, 250, 250, 0.9) 57%, rgba(186, 133, 84, 0.5) 57%, rgba(161, 79, 3, 0.5) 100%), url(../img/last-section.png) center/cover no-repeat;
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.form {
+  width: 60%;
+  padding-top: 3.2rem;
+  padding-left: 3.2rem;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.form__input {
+  font-weight: 400;
+  font-size: calc(10px + 6 * ((100vw - 320px) / 1020));
+  letter-spacing: 0.125rem;
+  color: #000;
+  background: #fff;
+  padding: 1rem 0rem 1rem 1rem;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 0.3rem;
+  width: 55%;
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 3px solid #66D763;
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+.form__input:focus:invalid {
+  border-bottom: 3px solid #D76363;
+}
+.form__lable {
+  font-weight: 400;
+  font-size: calc(10px + 6 * ((100vw - 320px) / 1020));
+  letter-spacing: 0.125rem;
+  display: block;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  transition: 0.5s all;
+}
+.form__input:-moz-placeholder-shown + .form__lable {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2rem);
+}
+.form__input:-ms-input-placeholder + .form__lable {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2rem);
+}
+.form__input:placeholder-shown + .form__lable {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2rem);
+}
+
 .header {
   height: 95vh;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/balloon-first-section.png) center/cover no-repeat;
@@ -516,6 +652,17 @@ body {
 
 .section-tour {
   padding-top: 10rem;
+  margin-bottom: 3rem;
+}
+
+.section-feedback {
+  padding: 3rem 0;
+  position: relative;
+}
+
+.section-book {
+  padding: 6.25rem;
+  background: linear-gradient(90deg, #BA8554, #A14F03);
 }
 
 @media (max-width: 750px) {
