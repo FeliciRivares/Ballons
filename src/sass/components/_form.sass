@@ -1,7 +1,7 @@
 .book
-    height: 31.25rem
+    min-height: 35rem
     background: linear-gradient(115deg, rgba(255,255,255,0.9) 0%, rgba(250,250,250,0.9) 57%, rgba(186,133,84,0.5) 57%, rgba(161,79,3,0.5) 100%), url(../img/last-section.png) center / cover no-repeat
-    box-shadow: $box-shadow-light
+    box-shadow: $box-shadow-dark
     border-radius: .3rem
     overflow: hidden
 .form
@@ -9,7 +9,13 @@
     padding-top: 3.2rem
     padding-left: 3.2rem 
     &__group:not(:last-child)
+        margin-bottom: 2rem
+    &__group:nth-child(4)
         margin-bottom: 3rem
+    &__group:last-child
+        padding-left:3.3rem 
+        
+        
     &__input
         font-weight: 400
         @include adaptiv-font(16, 10)
@@ -40,4 +46,38 @@
         opacity: 0
         visibility: hidden
         transform: translateY(-2rem)
-                
+    &__input-radio
+        display: none
+    &__group-radio
+        width: 35%
+        display: inline-block
+    &__lable-radio
+        cursor: pointer
+        position: relative
+        padding-left: 3rem 
+    &__button-radio
+        height: 2rem
+        width: 2rem
+        border-radius: 50%
+        border: .4rem solid $color-brown-dark
+        display: block
+        position: absolute
+        left: 0rem
+        top: -.33rem
+        &::after
+            content: ""
+            display: block
+            border-radius: 50%
+            height: 1rem
+            width: 1rem
+            background-color: $color-brown-light
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            opacity: 0
+            transition: .3s all
+    // вибираємо всі сусідні елементи ~ __input-radio в якому є псевдо елементи ::after які знаходяться __button-radio
+    &__input-radio:checked ~ &__lable-radio &__button-radio::after
+        opacity: 1
+
