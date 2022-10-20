@@ -629,6 +629,37 @@ body {
   opacity: 1;
 }
 
+.footer {
+  text-align: center;
+}
+.footer__logo {
+  min-height: 9.3rem;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__item {
+  display: inline-block;
+  transition: all 0.5s;
+}
+.footer__item:not(:last-child) {
+  margin-right: 3rem;
+}
+.footer__item a {
+  text-decoration: none;
+  color: #fff;
+  font-size: calc(10px + 6 * ((100vw - 320px) / 1020));
+  letter-spacing: 0.25rem;
+  font-weight: 300;
+}
+.footer__item:hover {
+  transform: translateY(-0.5rem);
+  transition: all 0.5s;
+}
+.footer__item:hover a {
+  color: #BA8554;
+}
+
 .header {
   height: 95vh;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/balloon-first-section.png) center/cover no-repeat;
@@ -723,6 +754,11 @@ body {
 .section-book {
   padding: 6.25rem;
   background: linear-gradient(90deg, #BA8554, #A14F03);
+}
+
+.section-footer {
+  padding-top: 5rem;
+  background-color: #333333;
 }
 
 @media (max-width: 750px) {

@@ -1,0 +1,23 @@
+.footer
+    text-align: center
+    &__logo
+        min-height: 9.3rem
+    &__list
+        list-style: none
+        
+    &__item
+        display: inline-block
+        transition: all .5s
+        &:not(:last-child)
+            margin-right: 3rem
+        a
+            text-decoration: none
+            color: $color-white
+            @include adaptiv-font(16, 10)
+            letter-spacing: 0.25rem
+            font-weight: 300
+        &:hover
+            transform: translateY(-.5rem)
+            transition: all .5s
+            a
+                color: $color-brown-light
