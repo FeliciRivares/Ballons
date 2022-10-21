@@ -14,8 +14,12 @@
         margin-bottom: 3rem
     &__group:last-child
         padding-left:3.3rem 
-        
-        
+    @include respond(tab-land)
+        &__group:not(:last-child)
+            margin-bottom: 0rem
+        &__group:nth-child(4)
+            margin-bottom: 0rem
+       
     &__input
         font-weight: 400
         @include adaptiv-font(16, 10)
@@ -49,9 +53,15 @@
     &__input-radio
         display: none
     &__group-radio
-        width: 35%
         display: inline-block
+        &:not(:last-child)
+            margin-right: 1.25rem
+        @include respond(tab-land)
+            display: block
+            &:not(:last-child)
+            margin-bottom: 1.25rem
     &__lable-radio
+        @include adaptiv-font(16, 10)
         cursor: pointer
         position: relative
         padding-left: 3rem 
@@ -64,6 +74,8 @@
         position: absolute
         left: 0rem
         top: -.33rem
+        @include respond(tab-land)
+            top: 0
         &::after
             content: ""
             display: block

@@ -1,7 +1,9 @@
 
 .section-about
     padding-top: 5rem
-    padding-bottom:8rem
+    margin-bottom: 8rem
+    @include respond(tab-land)
+        margin-bottom: 7rem
 .section-adventure
     padding: 13.125rem 0rem
     background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url(../img/balloon-third-section.png) center / cover no-repeat
@@ -10,7 +12,6 @@
         transform: skewY(-6deg)
 .section-tour
     padding-top: 10rem
-    margin-bottom: 3rem
 .section-feedback
     padding: 3rem 0
     position: relative
