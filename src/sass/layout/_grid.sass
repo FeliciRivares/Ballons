@@ -3,9 +3,14 @@
     margin: 0 auto
     &:not(:last-child)
         margin-bottom: $margin-vertical-big
+        @include respond(tab-port)
+            margin-bottom: 1.5rem
     @include clearfix
     @include respond(tab-land)
         max-width: 90%
+    @include respond(tab-port)
+        width: 70%
+        
 // grid col
 // by float elements
 .col-1-of-2
@@ -33,3 +38,7 @@
     float: left
     &:not(:last-child)
         margin-right: $gutter-horizontal
+    @include respond(tab-port)
+        width: 100%
+        margin-right: 0 !important
+        margin-bottom: 2rem

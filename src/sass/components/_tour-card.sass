@@ -3,7 +3,8 @@
     perspective: 120rem
     -moz-perspective: 120rem
     position: relative
-    
+    @include respond(tab-port)
+        height: 42rem
     &__side
         transition: all .7s ease-out
         height: 33rem
@@ -17,6 +18,8 @@
         border-radius: .3rem
         @include respond(tab-land)
             height: 36rem
+        @include respond(tab-port)
+            height: 42rem
         &_front
             background: $color-white
         &_back
@@ -34,6 +37,8 @@
         background-blend-mode: hard-light
         height: 16rem
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80% )
+        @include respond(tab-port)
+            height: 18rem 
         &_1
             background: $color-brown-light url(../img/tour-section/tour-1.png) center / cover no-repeat
         &_2
@@ -70,6 +75,8 @@
             margin: 0 auto
             width: 70%
             text-align: center
+            @include respond(tab-port)
+                max-width: 40%
             li
                 color: $color-grey
                 @include adaptiv-font(16, 16)
