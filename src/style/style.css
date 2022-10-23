@@ -384,7 +384,7 @@ body {
 }
 @media (max-width: 900px) {
   .card-tour {
-    height: 42rem;
+    height: auto;
   }
 }
 .card-tour__side {
@@ -407,18 +407,36 @@ body {
 }
 @media (max-width: 900px) {
   .card-tour__side {
-    height: 42rem;
+    height: auto;
+    position: relative;
   }
 }
 .card-tour__side_front {
   background: #fff;
+  padding-bottom: 9rem;
 }
 .card-tour__side_back {
   transform: rotateY(180deg);
   background: linear-gradient(120deg, #BA8554 0.03%, #A14F03 99.94%);
 }
+@media (max-width: 900px) {
+  .card-tour__side_back {
+    transform: rotateY(0deg);
+    padding: 3rem;
+    padding-top: 10rem;
+    margin-top: -9rem;
+    text-align: center;
+    -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  }
+}
 .card-tour:hover .card-tour__side_front {
   transform: rotateY(-180deg);
+}
+@media (max-width: 900px) {
+  .card-tour:hover .card-tour__side_front {
+    transform: rotateY(0deg);
+  }
 }
 .card-tour:hover .card-tour__side_back {
   transform: rotateY(0deg);
@@ -431,7 +449,12 @@ body {
 }
 @media (max-width: 900px) {
   .card-tour__img {
-    height: 18rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 600px) {
+  .card-tour__img {
+    height: 30rem;
   }
 }
 .card-tour__img_1 {
@@ -453,6 +476,12 @@ body {
   top: 12rem;
   right: 0rem;
 }
+@media (max-width: 600px) {
+  .card-tour__title {
+    top: 25rem;
+    right: 0rem;
+  }
+}
 .card-tour__span {
   background: linear-gradient(90deg, #BA8554, #A14F03);
   padding: 0.2rem 0.6rem 0.1rem 0.6rem;
@@ -462,6 +491,12 @@ body {
   position: absolute;
   top: -1.1rem;
   right: 0rem;
+}
+@media (max-width: 600px) {
+  .card-tour__span_1 {
+    top: -2.2rem;
+    right: 0rem;
+  }
 }
 .card-tour__span_2 {
   position: absolute;
@@ -473,12 +508,12 @@ body {
 .card-tour__descr ul {
   list-style: none;
   margin: 0 auto;
-  width: 70%;
+  max-width: 80%;
   text-align: center;
 }
 @media (max-width: 900px) {
   .card-tour__descr ul {
-    max-width: 40%;
+    max-width: 70%;
   }
 }
 .card-tour__descr ul li {
@@ -497,6 +532,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 900px) {
+  .card-tour__backSide-box {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+  }
 }
 .card-tour__text {
   margin-bottom: 5rem;
